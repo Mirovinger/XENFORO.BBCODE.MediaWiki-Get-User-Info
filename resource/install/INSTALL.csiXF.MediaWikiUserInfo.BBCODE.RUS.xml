@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="csiXF_bbCode_ADFBB123" title="(CSI/XF/BBCODE) MediaWiki: Get User Info" version_string="1.0.0" version_id="1" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="csiXF_bbCode_ADFBB123" display_order="99999999" debug_only="0"/>
+    <option option_id="csiXF_bbCode_ADFBB123_onoff" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_ADFBB123" display_order="1"/>
+    </option>
+    <option option_id="csiXF_bbCode_ADFBB123_urlApi" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_ADFBB123" display_order="2"/>
+    </option>
+    <option option_id="csiXF_bbCode_ADFBB123_usprop" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[registration|gender|editcount]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_ADFBB123" display_order="3"/>
+    </option>
+    <option option_id="csiXF_bbCode_ADFBB123_blockTitle" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[MediaWiki]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_ADFBB123" display_order="4"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="csiXF_bbCode_ADFBB123_id" version_id="1" version_string="1.0.0"><![CDATA[ID пользователя]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_name" version_id="1" version_string="1.0.0"><![CDATA[Имя пользователя]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_registration" version_id="1" version_string="1.0.0"><![CDATA[Регистрация]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_gender" version_id="1" version_string="1.0.0"><![CDATA[Пол]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_gender_male" version_id="1" version_string="1.0.0"><![CDATA[Мужской]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_gender_female" version_id="1" version_string="1.0.0"><![CDATA[Женский]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_gender_unknown" version_id="1" version_string="1.0.0"><![CDATA[Неизвестно]]></phrase>
+    <phrase title="csiXF_bbCode_ADFBB123_editcount" version_id="1" version_string="1.0.0"><![CDATA[Число правок]]></phrase>
+    <phrase title="custom_bb_code_wiki_user_title" version_id="1" version_string="1.0.0"><![CDATA[MediaWiki: Информация о пользователе]]></phrase>
+    <phrase title="custom_bb_code_wiki_user_desc" version_id="1" version_string="1.0.0"><![CDATA[Отображение информации о пользователе из MediaWiki.]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_onoff" version_id="1" version_string="1.0.0"><![CDATA[Активировать]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_onoff_explain" version_id="1" version_string="1.0.0"><![CDATA[Включение / отключение обработки тега.]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_urlApi" version_id="1" version_string="1.0.0"><![CDATA[Путь к API]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_urlApi_explain" version_id="1" version_string="1.0.0"><![CDATA[Введите URL по которому доступен "api.php" MediaWiki.
+<br/>Пример: <code>https://en.wikipedia.org/w/api.php</code>]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_usprop" version_id="1" version_string="1.0.0"><![CDATA[Данные запроса]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_usprop_explain" version_id="1" version_string="1.0.0"><![CDATA[Введите данные, которые будут переданы запросу.
+<br/>Пример: <code>registration|gender|editcount</code>]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_blockTitle" version_id="1" version_string="1.0.0"><![CDATA[Заголовок блока]]></phrase>
+    <phrase title="option_csiXF_bbCode_ADFBB123_blockTitle_explain" version_id="1" version_string="1.0.0"><![CDATA[Введите заголовок панели пользователя MediaWiki.]]></phrase>
+    <phrase title="option_group_csiXF_bbCode_ADFBB123" version_id="1" version_string="1.0.0"><![CDATA[(CSI/XF/BBCODE) MediaWiki: Информация о пользователе]]></phrase>
+    <phrase title="option_group_csiXF_bbCode_ADFBB123_description" version_id="1" version_string="1.0.0"><![CDATA[Отображение информации о пользователе из MediaWiki.
+<br/>Разработано в <a title="Создание стилей и дополнений для XenForo" class="csiXF_crGlobal csiXF_crAdmin csiXF_crOptions Tooltip" href="http://cyberspace.industries/">&quot;CYBERSPACE.Industries&quot;</a>.]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="csiXF_bbCode_ADFBB123_tag_wiki_user" version_id="1" version_string="1.0.0"><![CDATA[<xen:if is="{$gender} == 'male'">
+  <xen:set var="$genderIcon">fa-mars</xen:set>
+  <xen:set var="$genderText">{xen:phrase csiXF_bbCode_ADFBB123_gender_male}</xen:set>
+<xen:elseif is="{$gender} == 'female'" />
+  <xen:set var="$genderIcon">fa-venus</xen:set>
+  <xen:set var="$genderText">{xen:phrase csiXF_bbCode_ADFBB123_gender_female}</xen:set>
+</xen:if>
+
+<xen:require css="csiXF_bbCode_ADFBB123.css" />
+<ol class="csiXF_bbCode_ADFBB123 bbCodeWikiUser">
+  <li>
+    <span class="icon title">{$xenOptions.csiXF_bbCode_ADFBB123_blockTitle}</span>
+  </li>
+  <xen:if is="{$id}">
+    <li>
+      <span class="icon Tooltip" title="{xen:phrase csiXF_bbCode_ADFBB123_id}"><i class="fa fa-hashtag fa-fw"></i></span>
+      <span class="text">{xen:raw $id}</span>
+    </li>
+  </xen:if>
+  <xen:if is="{$name}">
+    <li>
+      <span class="icon Tooltip" title="{xen:phrase csiXF_bbCode_ADFBB123_name}"><i class="fa fa-user fa-fw"></i></span>
+      <span class="text">{xen:raw $name}</span>
+    </li>
+  </xen:if>
+  <xen:if is="{$registration}">
+    <li>
+      <span class="icon Tooltip" title="{xen:phrase csiXF_bbCode_ADFBB123_registration}"><i class="fa fa-sign-in fa-fw"></i></span>
+      <span class="text">{xen:raw $registration}</span>
+    </li>
+  </xen:if>
+  <xen:if is="{$gender} AND {$gender} != 'unknown'">
+    <li>
+      <span class="icon Tooltip" title="{xen:phrase csiXF_bbCode_ADFBB123_gender}"><i class="fa {$genderIcon} fa-fw"></i></span>
+      <span class="text">{$genderText}</span>
+    </li>
+  </xen:if>
+  <xen:if is="{$editcount}">
+    <li>
+      <span class="icon Tooltip" title="{xen:phrase csiXF_bbCode_ADFBB123_editcount}"><i class="fa fa-pencil fa-fw"></i></span>
+      <span class="text">{xen:raw $editcount}</span>
+    </li>
+  </xen:if>
+</ol>]]></template>
+    <template title="csiXF_bbCode_ADFBB123.css" version_id="1" version_string="1.0.0"><![CDATA[ol.bbCodeWikiUser {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+}
+
+ol.bbCodeWikiUser li {
+  float: left;
+  list-style: none;
+}
+
+ol.bbCodeWikiUser li span {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  padding: 6px 12px;
+}
+
+ol.bbCodeWikiUser li span.icon {
+  background: #eee;
+  color: #555;
+}
+
+ol.bbCodeWikiUser li span.text {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+ol.bbCodeWikiUser li:last-child span:last-child {
+  border-right: none;
+}]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes>
+    <bb_code bb_code_id="wiki_user" bb_code_mode="callback" has_option="no" callback_class="CSI\BbCodeMediaWikiGetUserInfo\BbCode\Formatter\Base" callback_method="getBbCodeMediaWikiGetUserInfo" option_regex="" trim_lines_after="0" plain_children="1" disable_smilies="1" disable_nl2br="1" disable_autolink="1" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+  </bb_codes>
+</addon>
